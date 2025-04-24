@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cooler Quotes API</title>
+  </head>
+  <body>
+    <h1>Cooler Quotes API (Dragon Ball Z: Cooler's Revenge)</h1>
+
+    <blockquote id="quote-container">
+      <q id="quote-text"><%= quote.quote %></q>
+    </blockquote>
+    <p id="quote-character">–<%= quote.character %></p>
+
+    <button id="random-qt-btn">Get Random Quote</button>
+
+    <br />
+    <br />
+
+    <select name="character-select" id="character-select">
+      <option value="">--Select a character--</option>
+    </select>
+
+    <button id="char-qt-btn">Get a quote by Character</button>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
