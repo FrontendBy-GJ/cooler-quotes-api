@@ -2,6 +2,7 @@ const quotes = require('./coolers-revenge-quotes.json');
 const express = require('express');
 const app = express();
 const cors = require('cors');
+const PORT = process.env.PORT || 8080;
 
 app.set('view engine', 'ejs');
 app.use(cors());
@@ -43,7 +44,4 @@ app.get('/api/quotes/random/:character', (req, res) => {
   res.json(quotesFrom[randomIdx]);
 });
 
-if (require.main === module) {
-  const PORT = process.env.PORT || 8080;
-  app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
-}
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
